@@ -305,9 +305,14 @@ section {
     font-style: italic; }
     .resume_item .resume_description strong {
       text-transform: uppercase;
-      font-style: normal;
-      margin-left: 10px; }
+      font-style: normal; }
 
+.left .resume_item .resume_description strong{
+  margin-left: 10px;
+}
+.right .resume_item .resume_description strong{
+  margin-right: 10px;
+}
 .s_portfolio ul,
 .s_portfolio li {
   margin: 0;
