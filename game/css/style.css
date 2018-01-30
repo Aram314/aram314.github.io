@@ -1,0 +1,101 @@
+body{
+    background: url(../images/background.jpg);
+    background-size:cover;
+}
+.bg{
+    width:100px;
+    height:100px;
+    border:1px solid grey;
+    border-radius:5%;
+    display:inline-block;
+    margin:0 2px;
+    background:url(../images/ques.png);
+    cursor:pointer;
+}
+h1{
+    text-align:center;
+    font-size:40px;
+    color:darkred;
+}
+.bg:hover{
+    box-shadow:0 0 15px grey;
+}
+.bg1{background:url(../images/1.png)}
+.bg2{background:url(../images/2.png)}
+.bg3{background:url(../images/3.png)}
+.bg4{background:url(../images/4.png)}
+.bg5{background:url(../images/5.png)}
+.bg6{background:url(../images/6.png)}
+.bg7{background:url(../images/7.png)}
+.bg8{background:url(../images/8.png)}
+
+div.container{
+    width:424px;
+    height:420px;
+    margin:30px auto;
+    background-color:lightblue;
+    padding:5px;
+    border-radius:2%;
+    box-shadow:10px 10px 5px #888888;
+}
+div.btn{
+    text-align:center;
+}
+div.btn button, #clearResults{
+    margin-right:20px;
+    padding:10px;
+    color:white;
+    background-color: darkred;
+    border:none;
+    cursor:pointer;
+    border-radius:4%;
+    font-weight:bold;
+}
+.timeCont{
+    color:white;
+    font-weight:bold;
+}
+.win{
+    color:red;
+    font-size:40px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+}
+#input{
+    height:30px;
+    font-size:25px;
+    outline:none;
+    padding:5px;
+}
+div#last{
+    margin-top:70px;
+}
+#confirm{
+    margin-right:20px;
+    padding:10px;
+    color:white;
+    background-color: darkred;
+    border:none;
+    cursor:pointer;
+    border-radius:4%;
+    font-weight:bold;
+}
+ol{
+    color:darkred;
+    font-size:20px;
+	font-weight:bold;
+	padding-left:20px;
+}
+.results{
+    width:424px;
+    float:left;
+}
+.first{
+    width:800px;
+    float:left;
+}
+li:after{
+    content:' seconds'
+}
