@@ -1,0 +1,85 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.personalInfo{
+		margin-top: 50px;
+	}
+	.resume_container .left,
+	.resume_container .left h3 {
+		text-align: left;
+		border-right: none;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.resume_container .left,
+	.resume_container .left h3 {
+		text-align: left;
+		border-right: none;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	header .name h1 {
+		font-size: 1.8em;
+		padding-right: 30px;
+		padding-left: 30px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.main_footer .social-wrapper {
+		width: 100%;
+		float: left;
+		margin-top: 20px;
+	}
+	.main_footer .social-wrapper ul{
+		padding-left: 0;
+	}	
+	.portfolio_item .port-item-cont {
+		padding-top: 5%;
+	}
+	.portfolio_item .port-item-cont:hover {
+		padding-top: 10%
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

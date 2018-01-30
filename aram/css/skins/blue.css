@@ -1,0 +1,86 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #0000CD; }
+
+p {
+  color: #888; }
+
+.color_element {
+  color: #0000CD; }
+
+.color_bg {
+  background-color: #0000CD; }
+
+.color_border {
+  border-color: #0000CD; }
+
+.bg_light {
+  background-color: #FAFAFA; }
+
+.bg_dark {
+  background-color: #222;
+  color: #fff; }
+  .bg_dark .s_description::after {
+    background-color: white; }
+
+.main_color_bg {
+  background-color: #222; }
+
+svg path {
+  fill: #fff; }
+
+.toggle_menu {
+  background-color: #000; }
+
+.top_menu a:hover {
+  color: #0000CD;
+  background-color: rgba(255, 255, 255, 0.15); }
+.top_menu a {
+  letter-spacing: 4px; }
+
+.name p {
+  color: #FAFAFA;
+  letter-spacing: 5px; }
+
+section h3 {
+  letter-spacing: 4px;
+  color: #888; }
+
+.s_about p:nth-child(even) {
+  color: #0000CD; }
+.s_about h2 {
+  letter-spacing: 3px; }
+
+.resume_item .year {
+  background-color: #0000CD;
+  color: #fff;
+  font-weight: 600;
+  font-style: italic; }
+
+.s_portfolio li {
+  color: #888; }
+  .s_portfolio li.active {
+    color: #fff;
+    border-bottom: 1px solid #0000CD; }
+
+.portfolio_item .port-item-cont a {
+  color: #0000CD;
+  border-color: #0000CD; }
+
+.contact-box .contact_icon {
+  color: #0000CD; }
+
+.text-danger {
+  color: #0000CD; }
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #0000CD;
+  outline: none; }
+form button {
+  background-color: #0000CD; }
+
+/*# sourceMappingURL=blue.css.map */

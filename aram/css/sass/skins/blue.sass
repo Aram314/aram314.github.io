@@ -1,0 +1,99 @@
+@import "../bourbon/bourbon"
+
+$color: #0000CD //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #FAFAFA
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	+kerning(1)
+
+	
+a
+	color: $color
+
+p
+	color: $text_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+	
+.bg_light
+	background-color: $bg_light
+.bg_dark
+	background-color: $main_color
+	color: #fff
+	.s_description::after
+		background-color: white
+
+.main_color_bg
+	background-color: $main_color
+svg
+	path
+		fill: #fff
+
+.toggle_menu
+	background-color: #000
+
+.top_menu
+	a:hover
+		color: $color
+		background-color: rgba(255,255,255,.15)
+	a
+		+kerning(4)
+
+.name
+	p
+		color: $bg_light
+		+kerning(5)
+
+section
+	h3
+		+kerning(4)
+		color: $text_color
+
+.s_about
+	p:nth-child(even)
+		color: $color
+	h2
+		+kerning(3)
+
+.resume_item
+	.year
+		background-color: $color
+		color: #fff
+		font-weight: 600
+		font-style: italic
+
+.s_portfolio
+	li
+		color: $text_color
+		&.active
+			color: #fff
+			border-bottom: 1px solid $color
+
+.portfolio_item .port-item-cont
+	a
+		color: $color
+		border-color: $color
+
+.contact-box
+	.contact_icon
+		color: $color
+.text-danger
+	color: $color
+form
+	input:focus,
+	textarea:focus
+		border: 1px solid $color
+		outline: none
+	button
+		background-color: $color

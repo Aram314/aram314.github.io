@@ -1,0 +1,86 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #FF1493; }
+
+p {
+  color: #888; }
+
+.color_element {
+  color: #FF1493; }
+
+.color_bg {
+  background-color: #FF1493; }
+
+.color_border {
+  border-color: #FF1493; }
+
+.bg_light {
+  background-color: #FAFAFA; }
+
+.bg_dark {
+  background-color: #222;
+  color: #fff; }
+  .bg_dark .s_description::after {
+    background-color: white; }
+
+.main_color_bg {
+  background-color: #222; }
+
+svg path {
+  fill: #fff; }
+
+.toggle_menu {
+  background-color: #000; }
+
+.top_menu a:hover {
+  color: #FF1493;
+  background-color: rgba(255, 255, 255, 0.15); }
+.top_menu a {
+  letter-spacing: 4px; }
+
+.name p {
+  color: #FAFAFA;
+  letter-spacing: 5px; }
+
+section h3 {
+  letter-spacing: 4px;
+  color: #888; }
+
+.s_about p:nth-child(even) {
+  color: #FF1493; }
+.s_about h2 {
+  letter-spacing: 3px; }
+
+.resume_item .year {
+  background-color: #FF1493;
+  color: #fff;
+  font-weight: 600;
+  font-style: italic; }
+
+.s_portfolio li {
+  color: #888; }
+  .s_portfolio li.active {
+    color: #fff;
+    border-bottom: 1px solid #FF1493; }
+
+.portfolio_item .port-item-cont a {
+  color: #FF1493;
+  border-color: #FF1493; }
+
+.contact-box .contact_icon {
+  color: #FF1493; }
+
+.text-danger {
+  color: #FF1493; }
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #FF1493;
+  outline: none; }
+form button {
+  background-color: #FF1493; }
+
+/*# sourceMappingURL=pink.css.map */
