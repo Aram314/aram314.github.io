@@ -15,6 +15,9 @@
 		text-align: left;
 		border-right: none;
 	}
+	#cv .resume_container .resume_icon, #cv .resume_container h3{
+		text-align: center;
+	}
 }
 
 /* Small Devices, Tablets */
