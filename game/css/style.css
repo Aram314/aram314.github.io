@@ -1,101 +1,94 @@
-body{
+body {
     background: url(../images/background.jpg);
-    background-size:cover;
+    background-size: cover;
 }
-.bg{
-    width:100px;
-    height:100px;
-    border:1px solid grey;
-    border-radius:5%;
-    display:inline-block;
-    margin:0 2px;
-    background:url(../images/ques.png);
-    cursor:pointer;
-}
-h1{
-    text-align:center;
-    font-size:40px;
-    color:darkred;
-}
-.bg:hover{
-    box-shadow:0 0 15px grey;
-}
-.bg1{background:url(../images/1.png)}
-.bg2{background:url(../images/2.png)}
-.bg3{background:url(../images/3.png)}
-.bg4{background:url(../images/4.png)}
-.bg5{background:url(../images/5.png)}
-.bg6{background:url(../images/6.png)}
-.bg7{background:url(../images/7.png)}
-.bg8{background:url(../images/8.png)}
 
-div.container{
-    width:424px;
-    height:420px;
-    margin:30px auto;
-    background-color:lightblue;
-    padding:5px;
-    border-radius:2%;
-    box-shadow:10px 10px 5px #888888;
+h1 {
+    font-size: 40px;
+    color: darkred;
 }
-div.btn{
-    text-align:center;
+
+.board {
+    width: 80%;
+    margin: 30px auto;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 2%;
+    box-shadow: 10px 10px 5px #888888;
 }
-div.btn button, #clearResults{
-    margin-right:20px;
-    padding:10px;
-    color:white;
-    background-color: darkred;
-    border:none;
-    cursor:pointer;
-    border-radius:4%;
-    font-weight:bold;
+
+.bg {
+    width: 24%;
+    height: 24%;
+    border: 1px solid grey;
+    border-radius: 5%;
+    display: inline-block;
+    margin: 0 .5%;
+    background: url(../images/ques.png);
+    background-size: cover;
+    cursor: pointer;
 }
-.timeCont{
-    color:white;
-    font-weight:bold;
+.bg:hover {
+    box-shadow: 0 0 15px grey;
 }
-.win{
-    color:red;
-    font-size:40px;
-    display:flex;
-    justify-content:center;
+
+.bg1 { background:url(../images/1.png) }
+.bg2 { background:url(../images/2.png) }
+.bg3 { background:url(../images/3.png) }
+.bg4 { background:url(../images/4.png) }
+.bg5 { background:url(../images/5.png) }
+.bg6 { background:url(../images/6.png) }
+.bg7 { background:url(../images/7.png) }
+.bg8 { background:url(../images/8.png) }
+
+.win {
+    color: red;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align:center;
+    text-align: center;
 }
-#input{
-    height:30px;
-    font-size:25px;
-    outline:none;
-    padding:5px;
+
+#last {
+    margin-top: 70px;
 }
-div#last{
-    margin-top:70px;
-}
-#confirm{
-    margin-right:20px;
-    padding:10px;
-    color:white;
+
+
+div.btn button, #clearResults, #confirm {
+    margin-right: 20px;
+    padding: 10px;
+    color: white;
     background-color: darkred;
-    border:none;
-    cursor:pointer;
-    border-radius:4%;
-    font-weight:bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 4%;
+    font-weight: 500;
 }
-ol{
-    color:darkred;
-    font-size:20px;
-	font-weight:bold;
-	padding-left:20px;
+
+#confirm {
+	font-size: 16px;
 }
-.results{
-    width:424px;
-    float:left;
+
+.timeCont {
+    color: green;
+    font-weight: 600;
 }
-.first{
-    width:800px;
-    float:left;
+
+#input {
+    height: 30px;
+    font-size: 25px;
+    outline: none;
+    padding: 5px;
 }
-li:after{
+
+ol {
+    color: darkred;
+    font-size: 20px;
+	font-weight: 500;
+	padding-left: 20px;
+}
+
+li:after {
     content:' seconds'
 }

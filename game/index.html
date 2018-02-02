@@ -5,24 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src = 'js/jquery-3.2.1.min.js'></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Game</title>
 </head>
 <body>
-<div class="first">
-  <h1>Memory Game</h1>
-  <div class = 'container'></div>
-  <div class = 'btn'>
-      <button class = 'newGame'>New Game</button>
-      <span class = 'timeCont'>Time : <span id = 'time'> 0 </span> seconds</span>
+
+  <div class="container">
+    <div class="row">
+
+      <div class='col-md-6 col-xs-12 left'>
+        <h1 class='text-center'>Memory Game</h1>
+        <div class = 'board'></div>
+        <div class = 'btn'>
+            <button class = 'newGame'>New Game</button>
+            <span class = 'timeCont'>Time : <span id = 'time'> 0 </span> seconds</span>
+        </div>
+      </div>
+
+      <div class='col-md-6 col-xs-12 right'>
+        <div class = 'results'>
+          <h1 class='text-center'>Results</h1>
+          <ol id="ol"></ol>
+          <button id="clearResults">Clear results</button>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
-  <div class = 'results'>
-      <h1>Results</h1>
-      <ol id="ol"></ol>
-      <button id="clearResults">Clear results</button>
-  </div>
-  <script src = 'js/script.js'></script>
+
+  <script src = 'js/jquery-3.2.1.min.js'></script>
+  <script src = 'js/bootstrap.min.js'></script>
+  <script src = 'js/main.js'></script>
 </body>
 </html>

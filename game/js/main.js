@@ -1,12 +1,25 @@
-$(function(){
-    var counter;
-    $('#clearResults').on('click',clearResults)
+$(document).ready(function(){
+    var boardWidth = $(".board").width();
+    
+    $(window).resize(function(){
+   		$('.board').height($(".board").width());
+	});
+
+	$('.board').height(boardWidth);
+
+
+
+
+
+
+	var counter;
+    $('#clearResults').on('click', clearResults);
     var timerId;
     localStore();
     function startGame() {
         localStore();
         $("<audio><source src='sounds/newGameSound.wav'></source></audio>")[0].play();
-        $('.container').html("").removeClass('win');
+        $('.board').html("").removeClass('win');
         $('#time').html(0);
         counter = 0;
         clearInterval(timerId);
@@ -17,9 +30,9 @@ $(function(){
         arr = arr.concat(arr);
         var newArr = shuffle(arr);
         for (var i = 0; i < 16; i++){
-            $('.container').append($('<div class = "bg"></div>'))
+            $('.board').append($('<div class = "bg"></div>'))
         }
-        $('.container').on('click',function(){
+        $('.board').on('click', function(){
             $(this).off('click');
             clearInterval(timerId);
             timerId = setInterval(function(){
@@ -40,17 +53,17 @@ $(function(){
                     return;
                 }
                 else if(newPic.hasClass(oldClass)){
-                    $('.bg').off('click',func);
+                    $('.bg').off('click', func);
                     setTimeout(function(){
                         newPic.css('visibility','hidden');
                         oldPic.css('visibility','hidden');
                         oldClass = '';
                         oldPic = '';
                         $("<audio><source src='sounds/matchSound.wav'></source></audio>")[0].play();
-                        $('.bg').on('click',func);
-                        if ( $("div[style]").length == 16){
+                        $('.bg').on('click', func);
+                        if ( $(".board div[style]").length == 16){
                             $("<audio><source src='sounds/winSound.wav'></source></audio>")[0].play();
-                            $('.container').html('<div id = "last">YOU WIN!!! <br>' + counter + ' seconds! <br><span id="enter">Enter your name:</span>  <br> <input id = "input" type = "text"><br><button id = "confirm">Confirm</button></div>').addClass('win');
+                            $('.board').html('<div id = "last">YOU WIN!!! <br>' + counter + ' seconds! <br><span id="enter">Enter your name:</span>  <br> <input id = "input" type = "text"><br><button id = "confirm">Confirm</button></div>').addClass('win');
                             $('#confirm').on('click',confirm);
                             clearInterval(timerId);
                         }
@@ -58,7 +71,7 @@ $(function(){
                     return;
                 }
                 else{
-                    $('.bg').off('click',func);
+                    $('.bg').off('click', func);
                     setTimeout(function(){
                         oldPic.removeClass(oldClass);
                         newPic.removeClass(newClass);
@@ -75,7 +88,7 @@ $(function(){
         }
         var oldPic = '';
         var oldClass = '';
-        $('.bg').on('click',func);
+        $('.bg').on('click', func);
 
         function shuffle(array) {
             var counter = array.length;
@@ -125,6 +138,5 @@ $(function(){
         localStorage.clear();
         $('#ol').html('')
     }
-
 
 });
