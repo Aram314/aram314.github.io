@@ -1,0 +1,11 @@
+
+table {
+    margin: auto;
+}
+td {
+    height: 95px;
+    width: 95px;
+    border: 1px solid grey;
+    font-size: 32px;
+    text-align: center;
+}
