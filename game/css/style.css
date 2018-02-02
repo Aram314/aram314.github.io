@@ -46,8 +46,9 @@ h1 {
 }
 
 .win {
+	width: 80%;
     color: red;
-    font-size: 40px;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +83,7 @@ div.btn button, #clearResults, #confirm {
 #input {
     height: 30px;
     font-size: 25px;
+    width: 80%;
     outline: none;
     padding: 5px;
 }
