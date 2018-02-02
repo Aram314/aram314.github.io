@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    var boardWidth = $(".board").width();
+    var boardWidth = $(".board").width()+18;
     
     $(window).resize(function(){
-   		$('.board').height($(".board").width());
+   		$('.board').height($(".board").width()+18);
 	});
 
 	$('.board').height(boardWidth);
