@@ -27,6 +27,7 @@ h1 {
     background: url(../images/ques.png);
     background-size: cover;
     cursor: pointer;
+    transition: all .2s;
 }
 .bg:hover {
     box-shadow: 0 0 15px grey;
