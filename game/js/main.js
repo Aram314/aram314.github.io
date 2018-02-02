@@ -1,16 +1,12 @@
 $(document).ready(function(){
-    var boardWidth = $(".board").width()+18;
+
+    var boardWidth = $(".board").width();
     
     $(window).resize(function(){
-   		$('.board').height($(".board").width()+18);
+   		$('.board').height($(".board").width());
 	});
 
 	$('.board').height(boardWidth);
-
-
-
-
-
 
 	var counter;
     $('#clearResults').on('click', clearResults);
