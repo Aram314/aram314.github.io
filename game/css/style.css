@@ -41,6 +41,10 @@ h1 {
 .bg7 { background:url(../images/7.png) }
 .bg8 { background:url(../images/8.png) }
 
+.bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7, .bg8 {
+	background-size: cover;
+}
+
 .win {
     color: red;
     font-size: 40px;
