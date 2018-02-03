@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    $('.hover').bind('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+
     $('.test').height($(window).height() - 80)
 
     function random(){
