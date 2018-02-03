@@ -10,12 +10,3 @@ td {
     text-align: center;
 }
 
-
-td:hover, td.hover_effect {
-    background-color: yellow;
-}
-
-.hover {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;        
-}
