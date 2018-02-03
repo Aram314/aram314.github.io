@@ -1,10 +1,10 @@
 // first - store the coords of all the cells for the position check
-var matrix = $('.wrapper div').map(function(){
+var matrix = $('.wrapper div').map(function() {
   var e = $(this),
       o = e.offset(),
       w = e.width(),
       h = e.height();
-  
+
   return {
     top: o.top,
     left: o.left,
@@ -19,20 +19,21 @@ var currentTarget = $(),
 
 
 var touchF = function(e) {
-   var touch = e.originalEvent.touches[0];
-   currentTarget = getCurrent(
-       {
-         clientX: touch.clientX,
-         clientY: touch.clientY
-       }
-     );
-  
-    // if the touch is in one of the cells and it's disfferent than the last touch cell
-    if (currentTarget && currentTarget != activeTarget) {
-      activeTarget = currentTarget;
-      console.log(currentTarget.html());
+  var touch = e.originalEvent.touches[0];
+  currentTarget = getCurrent(
+    {
+      clientX: touch.clientX,
+      clientY: touch.clientY
     }
- } 
+  );
+
+  // if the touch is in one of the cells and it's disfferent than the last touch cell
+  if (currentTarget && currentTarget != activeTarget) {
+    activeTarget = currentTarget;
+    console.log(currentTarget.html());
+    $('#output').append(currentTarget.html() + ' ');
+  }
+} 
 
 $('.wrapper').bind({
   touchstart: touchF,
@@ -48,9 +49,9 @@ function getCurrent(touch) {
       touch.clientY < obj.bottom &&
       touch.clientY > obj.top
     );
-    
+
     return b;
   });
-  
+
   return a.length > 0 ? a[0].e : null;
 }
