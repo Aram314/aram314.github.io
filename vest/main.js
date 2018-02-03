@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+var sum = 0;
 // first - store the coords of all the cells for the position check
 
 var matrix = $('.wrapper td').map(function() {
@@ -30,11 +31,13 @@ var touchF = function(e) {
     }
   );
 
-  // if the touch is in one of the cells and it's disfferent than the last touch cell
+  // if the touch is in one of the cells and it's different than the last touch cell
   if (currentTarget && currentTarget != activeTarget) {
     activeTarget = currentTarget;
-    $('#output2').append(currentTarget.html());
+    // $('#output2').append(currentTarget.html());
     $('#output').append(currentTarget.html() + ' ');
+    sum += +currentTarget.html();
+    $('#output2').append(sum + ' ');
   }
 } 
 
