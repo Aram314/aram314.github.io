@@ -1,5 +1,5 @@
 // first - store the coords of all the cells for the position check
-var matrix = $('.wrapper div').map(function() {
+var matrix = $('.wrapper td').map(function() {
   var e = $(this),
       o = e.offset(),
       w = e.width(),
