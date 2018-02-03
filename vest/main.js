@@ -32,7 +32,7 @@ var touchF = function(e) {
   );
 
   // if the touch is in one of the cells and it's different than the last touch cell
-  if (currentTarget && currentTarget != activeTarget) {
+  if (currentTarget) {
     activeTarget = currentTarget;
     // $('#output2').append(currentTarget.html());
     $('#output').append(currentTarget.html() + ' ');
