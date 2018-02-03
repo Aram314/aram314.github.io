@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 // first - store the coords of all the cells for the position check
@@ -34,7 +33,7 @@ var touchF = function(e) {
   // if the touch is in one of the cells and it's disfferent than the last touch cell
   if (currentTarget && currentTarget != activeTarget) {
     activeTarget = currentTarget;
-    console.log(currentTarget.html());
+    $('#output2').append(currentTarget.html());
     $('#output').append(currentTarget.html() + ' ');
   }
 } 
