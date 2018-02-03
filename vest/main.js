@@ -1,4 +1,8 @@
+
+$(document).ready(function(){
+
 // first - store the coords of all the cells for the position check
+
 var matrix = $('.wrapper td').map(function() {
   var e = $(this),
       o = e.offset(),
@@ -55,3 +59,4 @@ function getCurrent(touch) {
 
   return a.length > 0 ? a[0].e : null;
 }
+});
