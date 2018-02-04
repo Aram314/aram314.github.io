@@ -31,10 +31,14 @@ $(document).ready(function(){
                     console.log(array);
                     for(var i = 0; i < array.length; i++){
                         array[i].innerHTML = '';
-                        setTimeout(function(){
-                            array[i].innerHTML = Math.round((Math.random() * 7));
-                        },500)
                     }
+                    
+                    setTimeout(function(){
+                        for(var i = 0; i < array.length; i++){
+                          array[i].innerHTML = Math.round((Math.random() * 7));
+                        }
+                    }, 500);
+                    
                     // fallDown();
                 }
                 $(document).off('mouseover');
