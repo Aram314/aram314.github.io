@@ -18,12 +18,15 @@ var matrix = $('.wrapper td').map(function() {
   }
 }).get();
 
+//matrixy array a bolor td-neri koordinatnerov
+
 var currentTarget = $(),
     activeTarget = $();
 
 
 var touchF = function(e) {
   var touch = e.originalEvent.touches[0];
+
   currentTarget = getCurrent(
     {
       clientX: touch.clientX,
@@ -32,7 +35,7 @@ var touchF = function(e) {
   );
 
   // if the touch is in one of the cells and it's different than the last touch cell
-  if (currentTarget) {
+  if (currentTarget && currentTarget != activeTarget) {
     activeTarget = currentTarget;
     // $('#output2').append(currentTarget.html());
     $('#output').append(currentTarget.html() + ' ');
