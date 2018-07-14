@@ -8,6 +8,48 @@
         width:90%;
         border: 2px solid blue;
     }
+
+    /*tveri hamar*/
+
+    .container {
+        position: relative;
+        display:inline-block;
+    }
+    
+    .a-art {
+        position: absolute;
+        left: 98%;
+        top: 40%;
+    }
+    .r-art {
+        position: absolute;
+        left: 50%;
+        top: 29.5%;
+    }
+
+    .a-ner {
+        position: absolute;
+        left: 82%;
+        top: 40%;
+    }
+    .r-ner {
+        position: absolute;
+        left: 47%;
+        top: 29%;
+    }
+
+    .vertical-text {
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        font-weight: bold;
+    }
+    .teq-text {
+        transform: rotate(-45deg);
+        transform-origin: left top 0;
+        font-weight: bold;
+    }
+
+    /*tveri hamar verj*/
 </style>
 <body>
 
@@ -27,25 +69,54 @@
 	</tr>
 </table>
 
-<img src="ner.png" id='img'>
+
+
+
+<div class="container" id='art-cont' style='display:none'>
+    <img src="art.png">
+    <div class='a-art vertical-text' id='a-art'></div>
+    <div class="r-art teq-text" id='r-art'></div>
+</div>
+
+<div class="container" id='ner-cont'>
+    <img src="ner.png">
+    <div class='a-ner vertical-text' id='a-ner'></div>
+    <div class="r-ner teq-text" id='r-ner'></div>
+</div>
+
 <script type="text/javascript">
 	var table = document.getElementById('table');
 	var cont = document.getElementById('cont');
-	var img = document.getElementById('img');
+	
 	var r = document.getElementById('r');
 	var koxm = document.getElementById('koxm');
 	var in1 = document.getElementById('in')
+    var ner_cont = document.getElementById('ner-cont');
+    var art_cont = document.getElementById('art-cont');
+
 
     cont.onclick = function(event){
     	if(event.target.value == 'in'){
-			img.src = 'ner.png';
+			
+            art_cont.style.display = 'none';
+            ner_cont.style.display = 'inline-block';
 			koxm.value = '';
 			r.value = '';
+            document.getElementById('a-art').innerHTML = '';
+            document.getElementById('r-art').innerHTML = '';
+            document.getElementById('a-ner').innerHTML = '';
+            document.getElementById('r-ner').innerHTML = '';
 
     	} else if (event.target.value == 'out') {
-    		img.src = 'art.png';
+    		
+            art_cont.style.display = 'inline-block';
+            ner_cont.style.display = 'none';
     		koxm.value = '';
 			r.value = '';
+            document.getElementById('a-art').innerHTML = '';
+            document.getElementById('r-art').innerHTML = '';
+            document.getElementById('a-ner').innerHTML = '';
+            document.getElementById('r-ner').innerHTML = '';
     	}
     }
 
@@ -67,10 +138,11 @@
     		}
 
     	}
-
-
-
-    	
+        
+        document.getElementById('a-art').innerHTML = koxm.value;
+        document.getElementById('r-art').innerHTML = r.value;
+        document.getElementById('a-ner').innerHTML = Number(koxm.value).toFixed(2);
+        document.getElementById('r-ner').innerHTML = Number(r.value).toFixed(2);
 
     }
 
