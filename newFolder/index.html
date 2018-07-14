@@ -1,9 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Helloooo</title>
-</head>
+<title>HTML Tutorial</title>
 <body>
-hello!
+
+<div id='cont'>
+	<label><input type='radio' name='rect' value='in' checked id='in'> Շրջանագծին ներգծած քառակուսի</label><br><br>
+	<label><input type='radio' name='rect' value='out'> Շրջանագծին արտագծած քառակուսի</label>
+</div><br>
+
+<table id='table'>
+	<tr>
+		<td>Շառավիղ = </td>
+		<td><input type="number" id='r'></td>
+	</tr>
+	<tr>
+		<td>Քառակուսու կողմ = </td>
+		<td><input type="number" id='koxm'></td>
+	</tr>
+</table>
+
+<img src="ner.png" id='img'>
+<script type="text/javascript">
+	var table = document.getElementById('table');
+	var cont = document.getElementById('cont');
+	var img = document.getElementById('img');
+	var r = document.getElementById('r');
+	var koxm = document.getElementById('koxm');
+	var in1 = document.getElementById('in')
+
+    cont.onclick = function(event){
+    	if(event.target.value == 'in'){
+			img.src = 'ner.png';
+			koxm.value = '';
+			r.value = '';
+
+    	} else if (event.target.value == 'out') {
+    		img.src = 'art.png';
+    		koxm.value = '';
+			r.value = '';
+    	}
+    }
+
+    table.oninput = function(event){
+    	if(in1.checked == true){
+
+    		if(event.target.id == 'r') {
+    			koxm.value = Math.sqrt( 2 * Math.pow(r.value,2) );
+    		} else {
+    			r.value = Math.sqrt( Math.pow(koxm.value, 2) / 2 );
+    		}
+    		
+    	} else {
+
+    		if(event.target.id == 'r') {
+    			koxm.value = r.value * 2;
+    		} else {
+    			r.value = koxm.value / 2;
+    		}
+
+    	}
+
+
+
+    	
+
+    }
+
+</script>
 </body>
 </html>
